@@ -1,14 +1,13 @@
-/*body {
+body {
     max-width: 960px;
-    margin: auto;
-}*/
-
+    margin: 0 auto;
+}
 
 header {
     background-color: rgb(43,205,192);
     color: white;
     grid-area: header;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     font-size: 18pt;
@@ -25,6 +24,9 @@ h2 {
     margin-top: 10pt;
 }
 
+main {
+    grid-area: main;
+}
 
 .sec1 {
     grid-area: sec1;
@@ -45,6 +47,13 @@ h2 {
     grid-template-rows: 280pt 280pt;
     grid-template-areas: 
         "header header header"
+        "main main main";
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 260pt 260pt 260pt;
+    grid-template-areas:
         "sec1 sec2 sec3";
 }
 
@@ -89,9 +98,20 @@ p {
         grid-template-rows: 310pt 280pt 280pt 280pt;
         grid-template-areas: 
         "header"
+        "main"
+        "main"
+        "main";
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 400pt;
+        grid-template-rows: 280pt 280pt 280pt;
+        grid-template-areas:
         "sec1"
         "sec2"
         "sec3";
+
     }
 
     header {
